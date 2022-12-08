@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit a Task</title>
+    <link rel="stylesheet" href="/html/createTask.css">
+</head>
+<body>
+    <header>
+
+        <img src="/Images/heroImagePG3v1.jpg" alt="Hero Image" ">
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="taskManager.html">View Task</a>
+            <a href="CreateTask">Create a Task</a>
+        </nav>
+
+    </header>
+
+    <main>
+        <div id="about">
+            <h2>
+                Welcome!
+            </h2>
+
+            <h4>
+                We try our best to simplify the proccess of creating tasks.
+                Its actually as simple as filling out our 5 boxes
+            </h4>
+
+            <p>Select a user</p>
+            <p>Select a category</p>
+            <p>Awesome description</p>
+            <p>Pick a deadline date</p>
+            <p>How urgent is the task?</p>
+            <p>BAM! submit and you are all done!</p>
+        </div>
+
+        <form id="taskSubmition">
+            <h2>Lets Create a Task!</h2>
+
+            <label for="userSelect">Select a User</label>
+            <select name="userSelect" id="UserSelect">
+                <option value="blank">select a user</option>
+            </select>
+
+            <label for="categorySelect">Select a Category</label>
+            <select name="categorySelect" id="categorySelect">
+                <option value="blank">select a category</option>
+            </select>
+
+            <label for="textBox">Task Description</label>
+            <textarea name="textBox" id="text" cols="30" rows="10"></textarea>
+
+            <label for="deadline">Deadline</label>
+            <input type="date" name="deadline" id="deadline">
+
+            <label for="urgency">Urgency</label>
+            <select name="urgency" id="urgency">
+                <option value="blank">urgency level</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+
+            <input type="button" value="Submit">
+        </form>
+    </main>
+    
+</body>
+</html>
