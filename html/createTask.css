@@ -1,0 +1,67 @@
+img {
+    height: 500px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav {
+    background-color: gray;
+    padding: 1.5em;
+    text-align: center;
+}
+
+a{
+    color: white;
+    margin: 2em;
+    text-decoration: none;
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+#about {
+    width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(211, 211, 211, 0.696);
+}
+#about > h2,h4 {
+    text-align: center;
+    font-size: 1.8em;
+}
+
+#about > h4 {
+    padding: 2em;
+    font-size: 1.5em;
+}
+#about > p {
+    font-variant: small-caps;
+    font-size: 1.3em;
+    text-align: center;
+
+}
+
+form {
+    width: 50em;
+    display: flex;
+    flex-flow: column;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5em;
+}
+
+form > select , input{
+    width: 15em;
+    height: 2.5em;
+}
+
+textarea {
+    width: 20em;
+}
+
+
