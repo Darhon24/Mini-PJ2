@@ -1,6 +1,5 @@
 //creating variables for later use
 let dropDownData;
-let tempData;
 
 //creating variable for dropdowns
 let userDropdown = document.getElementById('userSelect')
@@ -9,23 +8,20 @@ let userDropdown = document.getElementById('userSelect')
 //creating endpoints
 let userEndpoint = 'http://localhost:8083/api/users'
 
-userDropdown.onclick = updateUserDropdown(userEndpoint)
+window.onload = fetchData()
 
 
-function fetchData(endpoint) {
-    fetch(endpoint)
+function fetchData() {
+    fetch(userEndpoint)
     .then(promise => promise.json())
     .then(data => {
-        console.log(data);
-        tempData = data;
-        console.log(tempData)
+        dropDownData = data;
+        updateUserDropdown()
 
     })
 }
 
-function updateUserDropdown(endpoint) {
-    fetchData(endpoint)
-    dropDownData = tempData
+function updateUserDropdown() {
     console.log(dropDownData)
     console.log('updatefunction')
     console.log(dropDownData)
