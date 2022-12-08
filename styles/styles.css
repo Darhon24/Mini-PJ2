@@ -1,0 +1,50 @@
+nav,footer{
+    padding: 8px;
+    background-color:grey;
+    border-radius: 10px;
+
+}
+
+ul{
+display: flex;
+justify-content: space-between;
+
+}
+li{
+    display: flex-inline;
+    list-style-type: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(254, 253, 253);
+}
+nav a{
+
+    text-decoration: none;
+    color: rgb(254, 253, 253);
+}
+#mainBody{
+    margin: 25px;
+}
+#userInfo{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 0, 136, 0.758);
+    padding: 20px;
+    border-radius: 20px;
+    opacity: 30px;
+ 
+}
+#userTask{
+    margin: 20px;
+    display: flex;
+    justify-content: space-evenly;
+   
+}
+.img{
+    display: flex;
+    justify-content: center;
+}
+.WTDimg{
+    width: 300px;
+
+}
