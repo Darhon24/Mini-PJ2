@@ -42,31 +42,31 @@
         <form id="taskSubmition">
             <h2>Lets Create a Task!</h2>
 
-            <label for="userSelect">Select a User</label>
-            <select name="userSelect" id="userSelect">
+            <label for="userid">Select a User</label>
+            <select name="userid" id="userid">
                 <option value="blank">select a user</option>
             </select>
 
-            <label for="categorySelect">Select a Category</label>
-            <select name="categorySelect" id="categorySelect">
+            <label for="category">Select a Category</label>
+            <select name="category" id="category">
                 <option value="blank">select a category</option>
             </select>
 
             <label for="textBox">Task Description</label>
-            <textarea name="textBox" id="text" cols="30" rows="10"></textarea>
+            <textarea name="description" id="text" cols="30" rows="10"></textarea>
 
             <label for="deadline">Deadline</label>
             <input type="date" name="deadline" id="deadline">
 
-            <label for="urgency">Urgency</label>
-            <select name="urgency" id="urgency">
+            <label for="priority">Urgency</label>
+            <select name="priority" id="priority">
                 <option value="blank">urgency level</option>
-                <option value="low">Low</option>
-                <option value="medium">Medium</option>
-                <option value="high">High</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
             </select>
 
-            <input type="button" value="Submit">
+            <input type="submit" value="Submit">
         </form>
     </main>
     
