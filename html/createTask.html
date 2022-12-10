@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Submit a Task</title>
     <link rel="stylesheet" href="/styles/createTask.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
-
-        <img src="/Images/heroImagePG3v1.jpg" alt="Hero Image" ">
-
         <nav>
             <a href="index.html">Home</a>
             <a href="taskManager.html">View Task</a>
@@ -39,36 +41,50 @@
             <p>BAM! submit and you are all done!</p>
         </div>
 
-        <form id="taskSubmition">
-            <h2>Lets Create a Task!</h2>
+        <div id="formDiv">
+            <form id="taskSubmition">
+                <h2>Lets Create a Task!</h2>
+    
+                <label for="userid">user</label>
+                <select name="userid" id="userid">
+                    <option value="blank">select a user</option>
+                </select> 
+    
+                <label for="category">category</label>
+                <select name="category" id="category">
+                    <option value="blank">select a category</option>
+                </select>
 
-            <label for="userSelect">Select a User</label>
-            <select name="userSelect" id="userSelect">
-                <option value="blank">select a user</option>
-            </select>
+                <label for="priority">urgency</label>
+                <select name="priority" id="priority">
+                    <option value="blank">urgency level</option>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+    
+                <label for="deadline">deadline</label>
+                <input type="date" name="deadline" id="deadline">
+    
 
-            <label for="categorySelect">Select a Category</label>
-            <select name="categorySelect" id="categorySelect">
-                <option value="blank">select a category</option>
-            </select>
 
-            <label for="textBox">Task Description</label>
-            <textarea name="textBox" id="text" cols="30" rows="10"></textarea>
+                <label for="textBox">description:</label>
+                <textarea name="description" id="text" cols="30" rows="10"></textarea>
+    
+    
+                <input id="submit" type="submit" value="Submit">
+            </form>
 
-            <label for="deadline">Deadline</label>
-            <input type="date" name="deadline" id="deadline">
-
-            <label for="urgency">Urgency</label>
-            <select name="urgency" id="urgency">
-                <option value="blank">urgency level</option>
-                <option value="low">Low</option>
-                <option value="medium">Medium</option>
-                <option value="high">High</option>
-            </select>
-
-            <input type="button" value="Submit">
-        </form>
+        </div>
+        
     </main>
+
+    <footer>
+        <p>Follow us on</p>
+        <img class="icons" src="/Images/icons8-facebook-48.png" alt="">
+        <img class="icons" src="/Images/icons8-instagram-48.png" alt="">
+        <img class="icons" src="/Images/icons8-twitter-48.png" alt="">
+    </footer>
     
     <script src="/scripts/createTask.js"></script>
 </body>
