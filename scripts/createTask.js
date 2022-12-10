@@ -6,7 +6,7 @@ let formJSON;
 //creating variable for dropdowns
 let userDropdown = document.getElementById('userid')
 let categoryDropdown = document.getElementById('category')
-const form = document.getElementById('taskSubmition');
+let form = document.getElementById('taskSubmition');
 
 
 //creating endpoints
@@ -41,14 +41,14 @@ function fetchCategoryData() {
 
 function updateUserDropdown() {
     console.log('updateUserfunction')
-    console.log(userDropData)
+    // console.log(userDropData)
     
     
     for (let i = 0; i < userDropData.length; i++) {
         let opt = document.createElement('option');
         opt.innerHTML = `${userDropData[i].id}: ${userDropData[i].username}`
-        opt.value = userDropData[i].id
-        console.log(opt)
+        opt.value = userDropData[i].id;
+        // console.log(opt);
         userDropdown.appendChild(opt)
     }
     fetchCategoryData()
@@ -56,40 +56,43 @@ function updateUserDropdown() {
 
 function updateCategoryDropdown() {
     console.log('updateCategoryfunction')
-    console.log(categoryDropData)
+    // console.log(categoryDropData)
     
     
     for (let i = 0; i < categoryDropData.length; i++) {
         let opt = document.createElement('option');
         opt.innerHTML = categoryDropData[i].name
         opt.value = categoryDropData[i].name
-        console.log(opt)
+        // console.log(opt)
         categoryDropdown.appendChild(opt)
     }
 }
 
 function getData(evt) {
+    console.log("get data function")
     evt.preventDefault();
     const data = new FormData(evt.target);
-    console.log(data.entries());
     formJSON = Object.fromEntries(data.entries());
     console.log(formJSON);
     sendData();
 }
 
 function sendData(){
+    console.log("send data function")
     console.log(formJSON);
     fetch(addToDoEndpoint, {
         method: "POST",
         body: JSON.stringify(formJSON),
-        headers: {"Content-type": "application/json; charset-UTF-8"}
+        headers: {"Content-type": "application/json; charset=UTF-8"}
     })
-    // .then(response => response.JSON())
-    // .then(json => {
-    //     let confirmationmessage = document.querySelector('#confirmationMessage');
-    //     confirmationmessage.innerHTML = 'New Goal Added';
-    // })
-    .catch(err => {
-        console.error(err);
-    })
+    .then(
+        alert('Task successfully submitted'),
+        clearingData()
+    )
+
+}
+
+function clearingData() {
+    console.log('clearing function')
+    form.reset();
 }

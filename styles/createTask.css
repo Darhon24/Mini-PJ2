@@ -1,3 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-image: url(/Images/PG3Background.png);
+    background-size: cover;
+
+}
+
+header{
+    background-image: url(/Images/heroImagePG3v1.jpg);
+    height: 20em;
+    background-size: cover;
+    background-repeat: none;
+    background-position: 0 500px;
+}
+.icons {
+    width: 48px;
+    height: 48px;
+}
+
+footer {
+    margin-top: 5em;
+    padding: .5em;
+    text-align: center;
+    background-color: rgb(236, 236, 236);
+}
 img {
     height: 500px;
     width: 1000px;
@@ -6,13 +33,16 @@ img {
 }
 
 nav {
-    background-color: gray;
+    /* background-color: rgb(80, 80, 117); */
     padding: 1.5em;
     text-align: center;
+    background: rgb(88,76,107);
+background: linear-gradient(80deg, rgba(88,76,107,1) 0%, rgba(64,52,252,1) 100%);
+    
 }
 
 a{
-    color: white;
+    color: rgb(255, 255, 255);
     margin: 2em;
     text-decoration: none;
 
@@ -25,10 +55,25 @@ main {
 }
 
 #about {
-    width: 40em;
-    margin-left: auto;
-    margin-right: auto;
     background-color: rgba(211, 211, 211, 0.696);
+    width: 30em;
+    margin-right: 2em;
+    backdrop-filter: blur(5px);
+    border-radius: .8em;
+    box-shadow: .3em .25em rgba(0, 0, 0, 0.495);
+}
+
+#formDiv {
+    display: flex;
+    width: 30em;
+    margin-left: 2em;
+    justify-content: center;
+    background-color: rgba(81, 81, 81, 0.585);
+    backdrop-filter: blur(5px);
+    border-radius: .8em;
+    box-shadow: .3em .25em rgba(0, 0, 0, 0.495);
+
+    
 }
 #about > h2,h4 {
     text-align: center;
@@ -45,23 +90,66 @@ main {
     text-align: center;
 
 }
+label {
+    font-variant: small-caps;
+    font-size: 1.1em;
+    text-align: center;
+    color: white;
+    margin-top: .5em;
+}
+
+form > h2 {
+    text-align: center;
+    color: white;
+}
 
 form {
-    width: 50em;
-    display: flex;
-    flex-flow: column;
-    margin-left: auto;
-    margin-right: auto;
     font-size: 1.5em;
+    width: 15em;
+    display:flex;
+    flex-direction: column;
+    margin: 0 auto;
 }
 
 form > select , input{
-    width: 15em;
-    height: 2.5em;
+    width: 10em;
+    height: 2em;
+
+
+}
+input {
+    margin-left: 8em;
+}
+
+select {
+    margin-left: 4em;
+    font-size: .8em;
+    border-radius: .5em;
+}
+
+#deadline {
+    font-size: 1em;
+    margin-left: 3.8em;
+    text-align: center;
+    border-radius: .5em;
+}
+
+#submit {
+    font-size: .75em;
+    margin-left: 4.8em;
+    border-radius: 5px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+option {
+    font-size: .9em;
+    text-align: center;
 }
 
 textarea {
     width: 20em;
+    margin-left: 3em;
 }
 
 
