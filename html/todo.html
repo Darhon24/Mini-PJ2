@@ -20,15 +20,17 @@
 
     <secetion id="mainBody">
         <div class="img">
-            <img src="/images/what-to-do-img.jpg" alt="Img that say What to do " class="WTDimg">
+            <img src="/images/to-do.png" alt="Img that say  to do " class="toDo">
         </div>
 
         <form id="userInfo">
             <select name="name" >
                 <option value="" id="name">---Pick A Name---</option>
             </select>
-            <input type="text" id="username" readonly>
-            <input type="text" id="userid" readonly>
+            <p id="userid"></p>
+            <p id="completed"></p>
+            <!-- <input type="text" id="username" readonly>
+            <input type="text" id="userid" readonly> -->
             <!-- <input type="text"  id="active" readonly> -->
         </form>
         <form id="userTask">
@@ -44,5 +46,6 @@
             <li>About</li>
         </ul>
     </footer>
+    <script src="/scripts/display.js"></script>
 </body>
 </html>
